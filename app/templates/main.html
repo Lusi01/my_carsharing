@@ -1,0 +1,76 @@
+<div class="pcoded-content">
+
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h5 class="m-b-10">Список автомобилей</h5>
+                        <p class="m-b-0">Выбери любой и катайся с поминутной оплатой</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/"> <i class="fa fa-home"></i> </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#!">Главная</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+                <div class="page-body">
+
+                    <div class="row">
+                        {% for car in car_list %}
+
+                        <div class="col-xl-4 col-md-6 col-sm-6 col-xs-12">
+                            <div class="card prod-view">
+                                <div class="prod-item text-center">
+                                    <div class="prod-img">
+                                        <div class="option-hover">
+                                            <button type="button"
+                                                    class="btn btn-success btn-icon waves-effect waves-light m-r-15 hvr-bounce-in option-icon">
+                                                <i class="icofont icofont-cart-alt f-20"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-primary btn-icon waves-effect waves-light m-r-15 hvr-bounce-in option-icon">
+                                                <i class="icofont icofont-eye-alt f-20"></i>
+                                            </button>
+                                            <button type="button"
+                                                    class="btn btn-danger btn-icon waves-effect waves-light hvr-bounce-in option-icon">
+                                                <i class="icofont icofont-heart-alt f-20"></i>
+                                            </button>
+                                        </div>
+                                        <a href="#!" class="hvr-shrink">
+                                            <img src="/assets/images/auto/{{ car.img_url }}"
+                                                 class="img-fluid o-hidden" alt="Фото авто">
+                                        </a>
+                                        <div class="p-new"><a href="/auto_detail/{{ car.id }}"> {{ car.new }} </a></div>
+                                    </div>
+                                    <div class="prod-info">
+                                        <a href="/auto_detail/{{ car.id }}" class="txt-muted">
+                                            <h4>{{ car.name_auto }}</h4>
+                                        </a>
+                                        <span class="prod-price">{{ car.rent_price }} р/мин</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

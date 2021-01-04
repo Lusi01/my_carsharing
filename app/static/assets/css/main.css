@@ -1,0 +1,10 @@
+input {
+    border: inherit;
+}
+
+
+.log-img-fluid {
+    max-width: 30%;
+    height: none;
+}
+

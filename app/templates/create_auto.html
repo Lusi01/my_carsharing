@@ -1,0 +1,120 @@
+<div class="pcoded-content">
+
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h5 class="m-b-10">Добавление нового автомобиля</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/"> <i class="fa fa-home"></i> </a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#!">Добавление авто</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Новый автомобиль</h5>
+                                    <span>Заполните поля для добавления нового автомобиля в
+                                                            базу</span>
+                                </div>
+                                <div class="card-block">
+                                    <form id="main" method="post" action="/create_auto">
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Название</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" name="name_auto"
+                                                       id="name_auto" placeholder="Название" required>
+                                                <span class="messages"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Стоимость аренды
+                                                в минуту</label>
+                                            <div class="col-sm-10">
+                                                <input type="number" class="form-control" id="rent_price"
+                                                       name="rent_price" value="0" min="0" step="0.01"
+                                                       placeholder="Стоимость" required>
+                                                <span class="messages"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Описание</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control"
+                                                       name="describe" id="describe"
+                                                       placeholder="Описание" required>
+                                                <span class="messages"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label">Фото автомобиля</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control"
+                                                       name="img_url" id="img_url"
+                                                       placeholder="Фото" required>
+                                                <span class="messages"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <label class="col-sm-2 col-form-label">Автоматическая
+                                                КПП</label>
+                                            <div class="col-sm-10">
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="transmission" id="transmission-1"
+                                                               value=1> ДА
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input class="form-check-input" type="radio"
+                                                               name="transmission" id="transmission-2"
+                                                               value=0> НЕТ
+                                                    </label>
+                                                </div>
+                                                <span class="messages"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2"></label>
+                                            <div class="col-sm-10">
+                                                <button type="submit"
+                                                        class="btn btn-primary m-b-0">Создать
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
